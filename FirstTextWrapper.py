@@ -1,1 +1,28 @@
-print("A".rjust((21-7)//2, '-'))
+
+'''
+I/P
+ABCDEFGHIJKLIMNOQRSTUVWXYZ
+4
+ABCD
+EFGH
+IJKL
+IMNO
+QRST
+UVWX
+YZ
+'''
+
+
+
+import textwrap
+
+
+def wrap(string, max_width):
+    wrapper = textwrap.TextWrapper(width=max_width)
+    return wrapper.fill(text=string)
+
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
